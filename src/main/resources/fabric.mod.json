@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "whisperleaftrees",
+	"version": "${version}",
+	"name": "Whisperleaf Trees",
+	"description": "New interesting mod about vanilla-like trees: willow, poplar, alder and aspen.",
+	"authors": [
+		"Almiris (Alminoris)"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "MIT",
+	"icon": "assets/whisperleaftrees/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.alminoris.whisperleaftrees.WhisperleafTrees"
+		],
+		"client": [
+			"net.alminoris.whisperleaftrees.WhisperleafTreesClient"
+		],
+		"fabric-datagen": [
+			"net.alminoris.whisperleaftrees.WhisperleafTreesDataGenerator"
+		]
+	},
+	"mixins": [
+		"whisperleaftrees.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
