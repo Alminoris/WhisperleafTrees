@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "whisperleaftrees:willow_fence",
+    "whisperleaftrees:poplar_fence",
+    "whisperleaftrees:alder_fence",
+    "whisperleaftrees:aspen_fence"
+  ]
+}

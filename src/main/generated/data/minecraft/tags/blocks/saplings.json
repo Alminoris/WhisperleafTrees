@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "whisperleaftrees:willow_sapling",
+    "whisperleaftrees:poplar_sapling",
+    "whisperleaftrees:alder_sapling",
+    "whisperleaftrees:aspen_sapling"
+  ]
+}

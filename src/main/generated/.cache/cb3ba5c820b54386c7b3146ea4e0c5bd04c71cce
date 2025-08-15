@@ -1,16 +1,16 @@
-// 1.21.1	2025-08-15T13:21:21.5641257	Whisperleaf Trees/Tags for minecraft:block
-4957b705b7217dd32e268eeba4fd4c3243a4d37b data\minecraft\tags\block\wooden_stairs.json
-9670ff4ab9c545e07f9c6be9096a1f03e1a39709 data\minecraft\tags\block\saplings.json
-7945c55411028fadf04e75c05c1c4d6c39a59264 data\minecraft\tags\block\logs_that_burn.json
-4e2136967e871b0c69fd90a40981157d7760868e data\minecraft\tags\block\planks.json
-3479c59aea2719905f1014e0e88fd1fd18890a32 data\minecraft\tags\block\wooden_pressure_plates.json
-29eccb99d327a88fb31fe2af71d33e4e54d7fca2 data\minecraft\tags\block\ceiling_hanging_signs.json
-11835812cb44d3ef05a0d1d92b508f6c9d375725 data\minecraft\tags\block\wall_signs.json
-2edd6c278b2e00cfcfd45da273d294d93b1f90f0 data\minecraft\tags\block\wall_hanging_signs.json
-73f278fd91146cdfce304f65f1c25295ff047813 data\minecraft\tags\block\wooden_trapdoors.json
-7f8642b6b1316318f32369ea474b6c873ebadc4d data\minecraft\tags\block\wooden_slabs.json
-5a6268a41a84ea3be9895911c34613dde1065712 data\minecraft\tags\block\wooden_fences.json
-3e790371d2ba5a43b5f8e7825222bf1ab72bdbd1 data\minecraft\tags\block\standing_signs.json
-8695a78652127ee677e41606cb17fdf2a3dd3775 data\minecraft\tags\block\wooden_doors.json
-4d28e28e2fd06e36a7a53ea0863a928144208c34 data\minecraft\tags\block\wooden_buttons.json
-5a7a764386ea8b162a76fdbcfc57c17fe8c52ee4 data\minecraft\tags\block\climbable.json
+// 1.20.1	2025-08-15T19:56:28.6413637	Whisperleaf Trees/Tags for minecraft:block
+8f2842d36f5e87adcb1fb7f41fc1b916e7f9c757 data\minecraft\tags\blocks\wooden_stairs.json
+970a9d52319e9eb75edf9ade03b526dbb839bebb data\minecraft\tags\blocks\wall_signs.json
+28d2b3955e0d6230f1c23f105141bc47819d394c data\minecraft\tags\blocks\climbable.json
+f9841cd2fb1a9ef1965bddd51b92c9dd188dab61 data\minecraft\tags\blocks\wooden_trapdoors.json
+8738550558db16db75184e02f109b3d72ba72dbf data\minecraft\tags\blocks\wooden_slabs.json
+459e9f7bb91644fd202a9b1fe7b0e040da253326 data\minecraft\tags\blocks\wall_hanging_signs.json
+f3d58e1436fe7c14638608c9105acf915b302ba5 data\minecraft\tags\blocks\ceiling_hanging_signs.json
+671bb2805b2b4d7ebcda4433342d653695b81c42 data\minecraft\tags\blocks\standing_signs.json
+fe77a939e263dd981d2675661e66f3b620e9b892 data\minecraft\tags\blocks\saplings.json
+9b68a9ff9d05aa57935af023e639ae71a8f8dc60 data\minecraft\tags\blocks\wooden_fences.json
+489269bb83d5c837baa05f512ac1a549287731c9 data\minecraft\tags\blocks\wooden_pressure_plates.json
+66c09f27bd578d343522d21faee60d0c7a3a7c11 data\minecraft\tags\blocks\wooden_doors.json
+9828e24b61aa750de5355860e3c46390266664f4 data\minecraft\tags\blocks\planks.json
+9858477e2bd341cc856499935c895cd2cc8129fd data\minecraft\tags\blocks\wooden_buttons.json
+a3d3f9a344d8139286caee4aba5083502fe4dc4d data\minecraft\tags\blocks\logs_that_burn.json

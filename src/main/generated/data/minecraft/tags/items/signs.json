@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "whisperleaftrees:willow_sign_item",
+    "whisperleaftrees:poplar_sign_item",
+    "whisperleaftrees:alder_sign_item",
+    "whisperleaftrees:aspen_sign_item"
+  ]
+}

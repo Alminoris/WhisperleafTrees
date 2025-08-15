@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "whisperleaftrees:alder_planks"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "/#/",
+    "/#/"
+  ],
+  "result": {
+    "item": "whisperleaftrees:alder_fence_gate"
+  },
+  "show_notification": true
+}
