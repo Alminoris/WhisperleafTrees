@@ -30,6 +30,5 @@
     "recipes": [
       "whisperleaftrees:aspen_wood"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

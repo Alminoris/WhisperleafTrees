@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:alder_planks_from_alder_log"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

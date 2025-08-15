@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:willow_button_from_willow_planks"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

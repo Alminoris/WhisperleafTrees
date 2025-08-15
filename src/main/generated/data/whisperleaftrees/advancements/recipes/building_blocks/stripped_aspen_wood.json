@@ -30,6 +30,5 @@
     "recipes": [
       "whisperleaftrees:stripped_aspen_wood"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -14,9 +14,7 @@ import static net.alminoris.whisperleaftrees.util.helper.ModBlockSetsHelper.*;
 
 public class ModItemGroups
 {
-    public static final ItemGroup WHISPERLEAF_TREES_TAB = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(net.alminoris.whisperleaftrees.WhisperleafTrees.MOD_ID, "whisperleaftreestab"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.whisperleaftreestab"))
+    public static final ItemGroup WHISPERLEAF_TREES_TAB = FabricItemGroup.builder(new Identifier(net.alminoris.whisperleaftrees.WhisperleafTrees.MOD_ID, "whisperleaftreestab")).displayName(Text.translatable("itemgroup.whisperleaftreestab"))
                     .icon(() -> new ItemStack(WOODEN_SAPLINGS.get("willow"))).entries((displayContext, entries) ->
                     {
                         for (String name : WOOD_NAMES)
@@ -43,7 +41,7 @@ public class ModItemGroups
                             entries.add(WOODEN_BOATS.get(name));
                             entries.add(WOODEN_CHEST_BOATS.get(name));
                         }
-                    }).build());
+                    }).build();
 
     public static void registerItemGroups()
     {

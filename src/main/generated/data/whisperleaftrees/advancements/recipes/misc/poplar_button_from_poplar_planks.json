@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:poplar_button_from_poplar_planks"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

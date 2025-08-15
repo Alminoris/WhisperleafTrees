@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:aspen_button_from_aspen_planks"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

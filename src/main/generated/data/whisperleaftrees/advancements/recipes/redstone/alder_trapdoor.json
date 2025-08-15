@@ -30,6 +30,5 @@
     "recipes": [
       "whisperleaftrees:alder_trapdoor"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -18,15 +18,12 @@ import net.minecraft.util.Identifier;
 public class ModBlocks 
 {
     public static final Block WILLOW_VINES = registerBlock("willow_vines",
-            new VineBlock(AbstractBlock.Settings.create()
+            new VineBlock(AbstractBlock.Settings.of(Material.REPLACEABLE_PLANT)
                     .mapColor(MapColor.GREEN)
-                    .replaceable()
                     .noCollision()
                     .ticksRandomly()
                     .strength(0.2F)
-                    .sounds(BlockSoundGroup.VINE)
-                    .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY)));
+                    .sounds(BlockSoundGroup.VINE)));
 
     private static Block registerBlock(String name, Block block)
     {

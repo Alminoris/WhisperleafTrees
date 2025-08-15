@@ -30,6 +30,5 @@
     "recipes": [
       "whisperleaftrees:stripped_poplar_wood"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
