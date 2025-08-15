@@ -3,7 +3,8 @@
 	"package": "net.alminoris.whisperleaftrees.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"FoliagePlacerTypeInvoker"
 	],
 	"injectors": {
 		"defaultRequire": 1

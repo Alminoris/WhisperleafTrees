@@ -14,7 +14,6 @@ import static net.alminoris.whisperleaftrees.item.ModItems.*;
 
 public class ModBlockSetsHelper
 {
-    //"platanus", "pink_lapacho"
     public static final String[] WOOD_NAMES = new String[] { "willow", "poplar", "alder", "aspen" };
 
     public static final Dictionary<String, Block> LEAVES = new Hashtable<>()

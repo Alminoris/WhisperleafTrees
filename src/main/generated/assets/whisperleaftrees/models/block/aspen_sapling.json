@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "whisperleaftrees:block/aspen_sapling"
+  }
+}

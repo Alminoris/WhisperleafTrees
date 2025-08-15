@@ -1,5 +1,6 @@
 package net.alminoris.whisperleaftrees.datagen;
 
+import net.alminoris.whisperleaftrees.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
@@ -25,6 +26,8 @@ public class ModModelProvider extends FabricModelProvider
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator)
     {
+        blockStateModelGenerator.registerWallPlant(ModBlocks.WILLOW_VINES);
+
         Dictionary<String, BlockStateModelGenerator.BlockTexturePool> woodenPlanksPool = new Hashtable<>()
         {{
             for(String name : WOOD_NAMES)

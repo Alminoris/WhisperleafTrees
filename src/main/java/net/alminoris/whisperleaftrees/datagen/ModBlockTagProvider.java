@@ -1,5 +1,6 @@
 package net.alminoris.whisperleaftrees.datagen;
 
+import net.alminoris.whisperleaftrees.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -19,6 +20,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup)
     {
+        getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                .add(ModBlocks.WILLOW_VINES);
+
         for (String name : WOOD_NAMES)
         {
             getOrCreateTagBuilder(BlockTags.SAPLINGS)

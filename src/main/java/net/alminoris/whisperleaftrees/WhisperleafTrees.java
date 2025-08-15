@@ -5,6 +5,8 @@ import net.alminoris.whisperleaftrees.entity.ModBoats;
 import net.alminoris.whisperleaftrees.item.ModItemGroups;
 import net.alminoris.whisperleaftrees.item.ModItems;
 import net.alminoris.whisperleaftrees.world.gen.ModWorldGeneration;
+import net.alminoris.whisperleaftrees.world.gen.decorator.ModTreeDecorators;
+import net.alminoris.whisperleaftrees.world.tree.ModFoliagePlacerTypes;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -46,6 +48,10 @@ public class WhisperleafTrees implements ModInitializer
 		ModBoats.registerBoats();
 
 		ModItemGroups.registerItemGroups();
+
+		ModTreeDecorators.register();
+
+		ModFoliagePlacerTypes.register();
 
 		ModWorldGeneration.generateModWorldGen();
 	}

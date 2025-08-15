@@ -1,5 +1,6 @@
 package net.alminoris.whisperleaftrees.item;
 
+import net.alminoris.whisperleaftrees.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -16,18 +17,14 @@ public class ModItemGroups
     public static final ItemGroup WHISPERLEAF_TREES_TAB = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(net.alminoris.whisperleaftrees.WhisperleafTrees.MOD_ID, "whisperleaftreestab"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.whisperleaftreestab"))
-                    .icon(() -> new ItemStack(Blocks.ACACIA_SAPLING)).entries((displayContext, entries) ->
+                    .icon(() -> new ItemStack(WOODEN_SAPLINGS.get("willow"))).entries((displayContext, entries) ->
                     {
                         for (String name : WOOD_NAMES)
                         {
                             entries.add(WOODEN_SAPLINGS.get(name));
-                        }
-                        for (String name : WOOD_NAMES)
-                        {
+                            if (name.equals("willow"))
+                                entries.add(ModBlocks.WILLOW_VINES);
                             entries.add(LEAVES.get(name));
-                        }
-                        for (String name : WOOD_NAMES)
-                        {
                             entries.add(LOGS.get(name));
                             entries.add(WOODS.get(name));
                             entries.add(STRIPPED_LOGS.get(name));

@@ -5,15 +5,28 @@ import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
 import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
 import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks 
 {
+    public static final Block WILLOW_VINES = registerBlock("willow_vines",
+            new VineBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .replaceable()
+                    .noCollision()
+                    .ticksRandomly()
+                    .strength(0.2F)
+                    .sounds(BlockSoundGroup.VINE)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+
     private static Block registerBlock(String name, Block block)
     {
         registerBlockItem(name, block);

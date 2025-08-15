@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "textures": {
+    "bottom": "whisperleaftrees:block/aspen_door_bottom",
+    "top": "whisperleaftrees:block/aspen_door_top"
+  }
+}

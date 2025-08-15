@@ -1,5 +1,6 @@
 package net.alminoris.whisperleaftrees.datagen;
 
+import net.alminoris.whisperleaftrees.block.ModBlocks;
 import net.alminoris.whisperleaftrees.util.helper.ModBlockSetsHelper;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -38,7 +39,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
     @Override
     public void generate()
     {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+        addDrop(ModBlocks.WILLOW_VINES, dropsWithSilkTouch(ModBlocks.WILLOW_VINES));
 
         for (String name : ModBlockSetsHelper.WOOD_NAMES)
         {
@@ -57,51 +58,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
             addDrop(ModBlockSetsHelper.WOODEN_SIGNS.get(name), drops(ModBlockSetsHelper.WOODEN_WALL_SIGNS.get(name)));
             addDrop(ModBlockSetsHelper.WOODEN_HANGING_SIGNS.get(name), drops(ModBlockSetsHelper.WOODEN_WALL_HANGING_SIGNS.get(name)));
             addDrop(ModBlockSetsHelper.WOODEN_SAPLINGS.get(name));
+            addDrop(ModBlockSetsHelper.LEAVES.get(name), leavesDrops(ModBlockSetsHelper.LEAVES.get(name),
+                    ModBlockSetsHelper.WOODEN_SAPLINGS.get(name), 0.0025f));
         }
-
-        /*addDrop(ModBlockSetsHelper.LEAVES.get("olive"), leavesDrops(ModBlockSetsHelper.LEAVES.get("olive"),
-                ModBlockSetsHelper.WOODEN_SAPLINGS.get("olive"), 0.0025f));
-
-        addDrop(ModBlockSetsHelper.LEAVES.get("tamarisk"), leavesDrops(ModBlockSetsHelper.LEAVES.get("tamarisk"),
-                ModBlockSetsHelper.WOODEN_SAPLINGS.get("tamarisk"), 0.0025f));
-
-        addDrop(ModBlockSetsHelper.LEAVES.get("western_serviceberry"), leavesDrops(ModBlockSetsHelper.LEAVES.get("western_serviceberry"),
-                ModBlockSetsHelper.WOODEN_SAPLINGS.get("western_serviceberry"), 0.0025f));*/
-    }
-
-    public LootTable.Builder tinyPlantDrops(Block withShears)
-    {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.dropsWithShears(
-                withShears,
-                (LootPoolEntry.Builder<?>)this.applyExplosionDecay(
-                        withShears,
-                        ItemEntry.builder(Items.WHEAT_SEEDS)
-                                .conditionally(RandomChanceLootCondition.builder(0.025F))
-                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE), 2))
-                )
-        );
-    }
-
-    private LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops)
-    {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
-                ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
-                .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
-    }
-
-    private LootTable.Builder leavesItemDrops(Block leaves, Block sapling, Item item, float... saplingChance)
-    {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.leavesDrops(leaves, sapling, saplingChance)
-                .pool(LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1.0F))
-                        .conditionally(this.createWithoutShearsOrSilkTouchCondition())
-                        .with(
-                                ((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(item)))
-                                        .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.00625F, 0.008333334F, 0.025F, 0.05F, 0.06F))
-                        )
-                );
     }
 }
